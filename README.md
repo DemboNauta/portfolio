@@ -1,3 +1,4 @@
-![image](https://github.com/DemboNauta/portfolio/assets/126664376/92e6534c-5b00-4527-b3d4-3ce7ce1c9196)
+![image](https://github.com/DemboNauta/portfolio/assets/126664376/a6629103-ec16-4186-ae4b-f6ff34310757)
+
 
 Buenas, este es mi portfolio personal!!
