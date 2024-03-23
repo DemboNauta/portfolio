@@ -121,13 +121,20 @@ main section{
     min-height: 500px;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
+}
+#contenedorBotones{
+    max-width: 451px;
 }
 
 .botones{
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,0.9108018207282913) 0%, rgba(5,12,25,0.8211659663865546) 100%, rgba(0,212,255,0.6979166666666667) 100%);    border: 2px solid #050612e9;
     color: white;
+    min-width: 113px;
+    width: 70%;
     transition: all 0.2s linear;
+
 }
 .botones:hover{
     background-color: #050612e9;
