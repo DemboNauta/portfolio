@@ -226,16 +226,15 @@ main section{
     color: white;
     min-width: 113px;
     width: 70%;
+    cursor: default;
     transition: all 0.2s linear;
    
 
 }
 .botonesProyectos:hover{
-    background-color: #050612e9;
-    -webkit-box-shadow: 0px 3px 34px -19px rgb(10, 12, 34);
-    -moz-box-shadow: 0px 3px 34px -19px rgba(10, 12, 34);
-    box-shadow: 0px 3px 34px -19px rgba(10, 12, 34);
+
     color: white;
+    cursor: default;
 }
 #js{
     font-size: 13px;
