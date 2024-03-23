@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
             var targetElement = document.querySelector(targetName);
             console.log(targetElement);
             var offset = targetElement.getBoundingClientRect().top + window.scrollY;
-    
+
             window.scrollTo({
-                top: offset - document.getElementById('header').offsetHeight,
+                top: (offset-40) - document.getElementById('header').offsetHeight,
                 behavior: 'smooth'
             });
         });

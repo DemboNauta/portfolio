@@ -86,24 +86,24 @@
         </section>
 
         <section id="proyectos">
-            <h2 class="font-weight-bold">Proyectos</h2>
+            <h2 class="font-weight-bold my-4">Proyectos</h2>
             <div class="container">
             <div class="row">
                 <div class="col">
                     <figure>
-                        <img src="img/plantilla.png" alt="" class="" width="300px" height="300px">
+                        <a href="#"><img src="img/plantilla.png" alt="" class="" width="300px" height="300px"></a>
                         <figcaption>Ejemplo de proyecto 1</figcaption>
                     </figure>
                 </div>
                 <div class="col">
                     <figure>
-                        <img src="img/plantilla.png" alt="" class="" width="300px" height="300px">
+                        <a href="#"><img src="img/plantilla.png" alt="" class="" width="300px" height="300px"></a>
                         <figcaption>Ejemplo de proyecto 2</figcaption>
                     </figure>
                 </div>
                 <div class="col">
                     <figure>
-                        <img src="img/plantilla.png" alt="" class="" width="300px" height="300px">
+                        <a href="#"><img src="img/plantilla.png" alt="" class="" width="300px" height="300px"></a>
                         <figcaption>Ejemplo de proyecto 3</figcaption>
                     </figure>
                 </div>
@@ -111,8 +111,32 @@
           </div>
         </section>
         <section id="contacto">
-            <form action=""></form>
+          <h2 class="font-weight-bold my-4">Contacto</h2>
+          
+          
+            <form data-netlify="true" name="contacto" method="POST" class="w-50 mx-auto">
+              <!-- Name input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="nombre"  name="nombre" class="form-control" placeholder="Nombre"/>
+                
+              </div>
             
+              <!-- Email input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="email" id="email"  name="email"  class="form-control"  placeholder="Email"/>
+              </div>
+            
+              <!-- Message input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <textarea class="form-control" id="mensaje"  name="mensaje"" rows="4"  placeholder="Escribe tu mensaje"></textarea>
+              </div>
+            
+              
+              </div>
+            
+              <!-- Submit button -->
+              <button data-mdb-ripple-init type="button" class="btn btn-block mb-4" id="enviar">Enviar</button>
+            </form>
         </section>
 
       </main>
@@ -126,7 +150,7 @@
               href="mailto:edgarmila_10@outlook.com"
               role="button"
               data-mdb-ripple-color="dark"
-              ><i class="bi bi-envelope-fill"></i>
+              ><i class="bi bi-envelope-fill icono"></i>
               </a>
       
             
@@ -140,7 +164,7 @@
               target="_blank"
               role="button"
               data-mdb-ripple-color="dark"
-              ><i class="bi bi-linkedin"></i
+              ><i class="bi bi-linkedin icono"></i
             ></a>
             <!-- Github -->
             <a
@@ -150,18 +174,19 @@
               target="_blank"
               role="button"
               data-mdb-ripple-color="dark"
-              ><i class="bi bi-github"></i
+              ><i class="bi bi-github icono"></i
             ></a>
           </section>
 
         </div>
 
       
-        <!-- Copyright -->
+        
         <div class="text-center p-3">
           Portfolio de Edgar Milá Molero
         </div>
-        <!-- Copyright -->
+        
       </footer>
 </body>
 </html>
+
