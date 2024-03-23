@@ -2,3 +2,4 @@
 
 
 Buenas, este es mi portfolio personal!!
+https://edgarmila.netlify.app/
