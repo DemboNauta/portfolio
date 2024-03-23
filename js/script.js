@@ -19,3 +19,21 @@ window.addEventListener('scroll', ()=>{
     });
 });
 
+document.addEventListener("DOMContentLoaded", ()=>{
+    document.querySelectorAll('.nav-link').forEach(function(anchor) {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+            let targetName = this.getAttribute('href').substr(1);
+            console.log(targetName);
+            var targetElement = document.querySelector(targetName);
+            console.log(targetElement);
+            var offset = targetElement.getBoundingClientRect().top + window.scrollY;
+    
+            window.scrollTo({
+                top: offset - document.getElementById('header').offsetHeight,
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+})
