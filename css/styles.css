@@ -58,6 +58,7 @@ nav{
 
 #imgPerfil {
     max-width: 260px;
+    min-width: 154px;
     padding: 5px;
     border: 5px solid transparent;
     border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
@@ -200,7 +201,9 @@ main section{
         top: .3125rem
     }
 }
-
+.imagenesProyectos{
+    max-width: 300px
+}
 #mensaje{
     resize: none;
 }
