@@ -143,6 +143,8 @@ main section{
     color: white;
     min-width: 113px;
     width: 70%;
+    max-width: fit-content;
+    padding: 8px;
     transition: all 0.2s linear;
 
 }
@@ -226,10 +228,14 @@ main section{
     color: white;
     min-width: 113px;
     width: 70%;
+    max-width: fit-content;
     cursor: default;
     transition: all 0.2s linear;
    
 
+}
+article div h3{
+    text-align: left !important;
 }
 .botonesProyectos:hover{
 
@@ -250,6 +256,19 @@ main section{
     
     .titulo{
         font-size: 21px;
+    }
+    
+    
+}
+@media(max-width:768px){
+    article div h3{
+        text-align: center !important;
+    }
+    .contenedorTecnologias{
+        margin: 10px auto;
+    }
+    .botonesRedireccion{
+        justify-content: center;
     }
     
 }
