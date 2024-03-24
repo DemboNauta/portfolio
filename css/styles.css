@@ -227,8 +227,8 @@ main section{
     background: linear-gradient(90deg, rgba(105, 101, 180, 0.911) 0%, rgba(4, 11, 24, 0.821) 100%, rgba(0,212,255,0.6979166666666667) 100%);    
     color: white;
     min-width: 113px;
-    width: 70%;
     max-width: fit-content;
+    height: 38px;
     cursor: default;
     transition: all 0.2s linear;
    
@@ -236,6 +236,15 @@ main section{
 }
 article div h3{
     text-align: left !important;
+}
+.imagenProyectos{
+    transition: all 0.2s linear;
+}
+.imagenProyectos:hover{
+    transform: scale(1.01);
+}
+.contenedorTecnologias p{
+    text-wrap: balance;
 }
 .botonesProyectos:hover{
 
@@ -271,6 +280,11 @@ article div h3{
         justify-content: center;
     }
     
+}
+@media(max-width:1635px){
+    .contenedorTecnologias{
+        width: 100% !important; 
+    }
 }
 @media(max-width:1000px){
     main section{
