@@ -127,7 +127,7 @@ main section{
     border-radius: 8px;
     width: 80%;
     margin-bottom: 150px;
-    min-height: 500px;
+    min-height: 300px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
@@ -260,6 +260,7 @@ article div h3{
 }
 .imagenProyectos{
     transition: all 0.2s linear;
+    border: 1px solid rgb(0, 0, 0);
 }
 .imagenProyectos:hover{
     transform: scale(1.01);
@@ -282,6 +283,31 @@ article div h3{
 .icono:hover{
     color: rgb(184, 184, 184);
 }
+#tecnologías .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    
+}
+
+#tecnologías .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#tecnologías .card-body {
+    transition: background-color 0.3s;
+    min-height: 110px;
+}
+
+#tecnologías .card:hover .card-body {
+    background-color: #f8f9fa; /* Color de fondo más claro al pasar el ratón */
+}
+#tecnologías a{
+    text-decoration: none;
+    color: black;
+}
+
+
 
 @media(max-width:500px){
     
