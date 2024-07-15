@@ -121,19 +121,17 @@ nav{
 }
 
 main section{
-    /* border: 1px solid rgba(103, 103, 103, 0.307);
-    border-radius: 8px; */
     background-color: rgb(241, 241, 241);
     border-radius: 8px;
     width: 80%;
     margin-bottom: 150px;
-    min-height: 300px;
+    min-height: 350px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
 }
 .contenedorBotones{
-    max-width: 458px;
+    max-width: 500px;
 }
 
 
@@ -147,6 +145,25 @@ main section{
     padding: 8px;
     transition: all 0.2s linear;
 
+}
+.curriculum {
+    background: rgb(36,0,2);
+    background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgba(122, 58, 24, 0.82) 100%, rgba(36,0,2,0.91) 100%); 
+    border: 2px solid #c73021;
+    color: white;
+    min-width: 113px;
+    width: 70%;
+    max-width: fit-content;
+    padding: 8px;
+    transition: all 0.2s linear;
+}
+
+.curriculum:hover {
+    background-color: #ffffff; 
+    box-shadow: 0px 9px 34px -19px rgba(247, 0, 0, 0.8); 
+    -webkit-box-shadow: 0px 9px 34px -19px rgba(247, 0, 0, 0.8); 
+    -moz-box-shadow: 0px 9px 34px -19px rgba(247, 0, 0, 0.8); 
+    color: white;
 }
 .botones:hover{
     background-color: #050612e9;
@@ -307,7 +324,15 @@ article div h3{
     color: black;
 }
 
-
+#contacto{
+    margin-bottom: 250px !important;
+}
+.navbar-toggler {
+    border-color: white; /* Cambia el color del borde del botón */
+}
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
 
 @media(max-width:500px){
     
@@ -326,6 +351,9 @@ article div h3{
     }
     .botonesRedireccion{
         justify-content: center;
+    }
+    section p{
+        text-align: center !important;
     }
     
 }

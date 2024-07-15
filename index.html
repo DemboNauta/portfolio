@@ -19,13 +19,17 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand text-center sticky-top" id="header">
-    <div class="container-fluid  justify-content-center">
-      <div class=" navbar">
-        <div class="navbar-nav gap-sm-2 ">
+  <nav class="navbar navbar-expand-sm text-center sticky-top" id="header">
+    <div class="container-fluid">
+      <button class="navbar-toggler d-block d-sm-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div class="navbar-nav gap-sm-2">
           <a class="nav-link activo" href="/#inicio">Inicio</a>
           <a class="nav-link" href="/#estudios">Estudios</a>
           <a class="nav-link" href="/#proyectos">Proyectos</a>
+          <a class="nav-link" href="/#tecnologías">Tecnologías</a>
           <a class="nav-link" href="/#contacto">Contacto</a>
         </div>
       </div>
@@ -41,17 +45,21 @@
           Microinformáticos y Redes</b> </p>
       <div class="container">
         <div class="row mx-auto contenedorBotones">
-          <div class="col-12 col-md-4 mb-2">
+          <div class="col-12 col-md-3 mb-2">
             <a href="https://www.linkedin.com/in/edgar-milá-molero/" target="_blank"
-              class="btn botones rounded-pill me-1"><i class="bi bi-linkedin "></i> LinkedIn</a>
+              class="btn botones rounded-pill me-1"><i class="bi bi-linkedin"></i> LinkedIn</a>
           </div>
-          <div class="col-12 col-md-4 mb-2">
+          <div class="col-12 col-md-3 mb-2">
             <a href="https://github.com/DemboNauta" class="btn botones rounded-pill me-1" target="_blank"><i
-                class="bi bi-github "></i> GitHub</a>
+                class="bi bi-github"></i> GitHub</a>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-3 mb-2">
             <a href="mailto:edgarmila_10@outlook.com" class="btn botones rounded-pill me-1" target="_blank"><i
-                class="bi bi-envelope-fill "></i> Email</a>
+                class="bi bi-envelope-fill"></i> Email</a>
+          </div>
+          <div class="col-12 col-md-3 mb-2">
+            <a href="./assets/CurriculumEdgarMiláMolero.pdf" class="btn curriculum rounded-pill me-1" target="_blank" download><i
+                class="bi bi-file-earmark-text"></i> CV</a>
           </div>
         </div>
       </div>
@@ -431,7 +439,7 @@
 
         <div data-mdb-input-init class="form-outline mb-4">
           <textarea class="form-control" id="mensaje" name="mensaje"" rows=" 4"
-            placeholder="Escribe tu mensaje"></textarea>
+            placeholder="Escríbeme un mensaje"></textarea>
         </div>
 
         </div>
