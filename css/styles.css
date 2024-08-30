@@ -235,6 +235,19 @@ main section {
     text-overflow: ellipsis;
     border: 1px solid rgb(59, 55, 55);
 }
+.date-span {
+    background-color: #c8226a43;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 12px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid rgb(131, 125, 125);
+    padding: 1px 12px !important;
+}
 
 
 
@@ -336,11 +349,14 @@ hr {
     font-weight: bold;
     font-size: 19px;
     margin-top: 0;
+    min-height: 3.5rem;
+
 }
 
 .study-institution {
     margin: 0;
     color: #555;
+    min-height: 3.5rem;
 }
 .study-year{
     margin: 0;
@@ -457,7 +473,7 @@ article div h3 {
     .titulo {
         font-size: 21px;
     }
-
+    
 
 }
 
@@ -468,6 +484,9 @@ article div h3 {
 
     .contenedorTecnologias {
         margin: 10px auto;
+    }
+    .study-title, .study-institution {
+        min-height: 0rem;
     }
 
 
@@ -493,4 +512,10 @@ article div h3 {
     }
 
 
+}
+
+@media (min-width:1000px) {
+    .study-title, .study-institution {
+        min-height: 0rem;
+    }
 }
