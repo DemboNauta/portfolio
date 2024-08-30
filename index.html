@@ -20,18 +20,21 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm text-center sticky-top" id="header">
+  <nav class="navbar navbar-expand-md text-center sticky-top" id="header">
     <div class="container-fluid">
-      <button class="navbar-toggler d-block d-sm-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="menuButton">
+      <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+        id="menuButton">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <div class="navbar-nav gap-sm-2">
           <a class="nav-link activo" href="/#inicio">Inicio</a>
-          <a class="nav-link" href="/#estudios">Estudios</a>
+          <a class="nav-link" href="/#experiencia">Experiencia</a>
+          <a class="nav-link" href="/#estudios">Formación</a>
           <a class="nav-link" href="/#proyectos">Proyectos</a>
           <a class="nav-link" href="/#tecnologías">Tecnologías</a>
-          <a class="nav-link" href="/#contacto">Contacto</a>
+          <a class="nav-link" href="/#contacto">Contáctame</a>
         </div>
       </div>
     </div>
@@ -59,13 +62,81 @@
                 class="bi bi-envelope-fill"></i> Email</a>
           </div>
           <div class="col-12 col-md-3 mb-2">
-            <a href="./assets/CurriculumEdgarMiláMolero.pdf" class="btn curriculum rounded-pill me-1" target="_blank" download><i
-                class="bi bi-file-earmark-text"></i> CV</a>
+            <a href="./assets/CurriculumEdgarMiláMolero.pdf" class="btn curriculum rounded-pill me-1" target="_blank"
+              download>
+              <div class="div-cv-text content">
+                <i class="bi bi-file-earmark-text"></i> CV
+              </div>
+              <i class="bi bi-download"></i>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
+    <section id="experiencia">
+      <h2 class="font-weight-bold text-start p-4 text-center"><i class="bi bi-pc-display-horizontal"></i>
+        Experiencia laboral</h2>
+    
+      <div class="container-fluid mt-4 py-4">
+        <div class="row w-75 mx-auto mb-5">
+
+          <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+            <a href="https://www.solucionesip.com/" target="_blank">
+              <img src="./img/solucionesIp.webp" alt="solucionesIp" class="imagenExperiencia img-fluid"">
+            </a>
+          </div>
+
+          <div class="col-12 col-md-5 text-start mb-3 mb-md-0">
+            <h5 class="text-center text-lg-start"><b>Soluciones IP</b></h5>
+            <p class="text-center text-lg-start">FullStack Developer Angular & .NET</p>
+            <div class="tech-button d-flex flex-wrap justify-content-center justify-content-lg-start">
+              <span class="badge bg-techbadge mb-1 me-1">Angular</span>  
+              <span class="badge bg-techbadge mb-1 me-1">.NET</span>
+              <span class="badge bg-techbadge mb-1 me-1">BootStrap 5</span>  
+              <span class="badge bg-techbadge mb-1 me-1">SQL Server</span>  
+            </div>
+            <div class="col-12 col-md-3 text-center text-lg-start">
+              <span class="badge bg-light text-dark border border-1 border-dark mt-3">Cuenca (España)</span>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3 text-center text-lg-start">
+            <span class="experiencie-span py-1 px-1 px-lg-2">Septiembre 2024 - Actualidad</span>
+          </div>
+        </div>
+    
+        <div class="row w-75 mx-auto mt-4">
+
+          <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+            <a href="https://www.servinet.net/" target="_blank">
+              <img src="./img/servinet.webp" alt="servinet" class="imagenExperiencia img-fluid">
+            </a>
+          </div>
+
+          <div class="col-12 col-md-5 text-start mb-3 mb-md-0">
+            <h5 class="text-center text-lg-start"><b>Servinet Sistemas y Comunicación S.L.U.</b></h5>
+            <p class="text-center text-lg-start">FullStack Developer Angular & Python (Prácticas)</p>
+            <div class="tech-buttons d-flex flex-wrap justify-content-center justify-content-lg-start">
+              <span class="badge bg-techbadge mb-1 me-1">Angular</span>  
+              <span class="badge bg-techbadge mb-1 me-1">Python</span>
+              <span class="badge bg-techbadge mb-1 me-1">BootStrap 5</span>  
+              <span class="badge bg-techbadge mb-1 me-1">Karma</span>   
+              <span class="badge bg-techbadge mb-1 me-1">Jasmine</span>
+              <span class="badge bg-techbadge mb-1 me-1">Cypress.io</span> 
+            </div>
+            <div class="col-12 col-md-3 text-center text-lg-start">
+              <span class="badge bg-light text-dark border border-1 border-dark mt-3">Cuenca (España)</span>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3 text-center text-lg-start">
+            <span class="experiencie-span py-1 px-1 px-lg-2">Abril 2024 - Junio 2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
     <section id="estudios">
       <h2 class="font-weight-bold text-start p-4 text-center"><i class="bi bi-book"></i> Formación académica</h2>
       <div class="container-fluid mt-4">
@@ -121,8 +192,8 @@
         <article class="d-flex flex-wrap mb-4">
           <div class="col-12 col-md-6">
             <div class="p-1">
-              <a href="https://devthreads.es/" target="_blank"><img
-                  src="img/devthreads.webp" alt="" class="w-100 rounded imagenProyectos"></a>
+              <a href="https://devthreads.es/" target="_blank"><img src="img/devthreads.webp" alt=""
+                  class="w-100 rounded imagenProyectos"></a>
             </div>
           </div>
           <div class="col-12 col-md-6 ps-3">
@@ -131,18 +202,37 @@
 
             <div class="row contenedorTecnologias w-75 mb-4">
               <div class="col-xl-4 col-lg-12 col-md-12 mb-2">
-                <span class="btn botonesProyectos rounded me-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114.4 122.88" width="21" height="21" style="display: inline-block; vertical-align: middle;">
-                  <style type="text/css">
-                    .st0 { fill-rule:evenodd; clip-rule:evenodd; fill:#DD0031; }
-                    .st1 { fill-rule:evenodd; clip-rule:evenodd; fill:#C3002F; }
-                    .st2 { fill-rule:evenodd; clip-rule:evenodd; fill:#FFFFFF; }
-                  </style>
-                  <g>
-                    <polygon class="st0" points="57.2,0 57.2,0 57.2,0 0,20.4 8.72,96.03 57.2,122.88 57.2,122.88 57.2,122.88 105.68,96.03 114.4,20.4 57.2,0"/>
-                    <polygon class="st1" points="57.2,0 57.2,13.64 57.2,13.58 57.2,75.82 57.2,75.82 57.2,122.88 57.2,122.88 105.68,96.03 114.4,20.4 57.2,0"/>
-                    <path class="st2" d="M57.2,13.58L21.44,93.76l0,0h13.33l0,0l7.19-17.94h30.35l7.19,17.94l0,0h13.33l0,0L57.2,13.58L57.2,13.58 L57.2,13.58L57.2,13.58L57.2,13.58L57.2,13.58z M67.65,64.76H46.76L57.2,39.63L67.65,64.76L67.65,64.76z"/>
-                  </g>
-                </svg> Angular</span>
+                <span class="btn botonesProyectos rounded me-1"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 114.4 122.88" width="21" height="21"
+                    style="display: inline-block; vertical-align: middle;">
+                    <style type="text/css">
+                      .st0 {
+                        fill-rule: evenodd;
+                        clip-rule: evenodd;
+                        fill: #DD0031;
+                      }
+
+                      .st1 {
+                        fill-rule: evenodd;
+                        clip-rule: evenodd;
+                        fill: #C3002F;
+                      }
+
+                      .st2 {
+                        fill-rule: evenodd;
+                        clip-rule: evenodd;
+                        fill: #FFFFFF;
+                      }
+                    </style>
+                    <g>
+                      <polygon class="st0"
+                        points="57.2,0 57.2,0 57.2,0 0,20.4 8.72,96.03 57.2,122.88 57.2,122.88 57.2,122.88 105.68,96.03 114.4,20.4 57.2,0" />
+                      <polygon class="st1"
+                        points="57.2,0 57.2,13.64 57.2,13.58 57.2,75.82 57.2,75.82 57.2,122.88 57.2,122.88 105.68,96.03 114.4,20.4 57.2,0" />
+                      <path class="st2"
+                        d="M57.2,13.58L21.44,93.76l0,0h13.33l0,0l7.19-17.94h30.35l7.19,17.94l0,0h13.33l0,0L57.2,13.58L57.2,13.58 L57.2,13.58L57.2,13.58L57.2,13.58L57.2,13.58z M67.65,64.76H46.76L57.2,39.63L67.65,64.76L67.65,64.76z" />
+                    </g>
+                  </svg> Angular</span>
               </div>
               <div class="col-xl-4 col-lg-12 col-md-12 mb-2">
                 <span class="btn botonesProyectos rounded me-1"><svg xmlns="http://www.w3.org/2000/svg"
@@ -177,22 +267,26 @@
               </div>
               <div class="col-xl-4 col-md-12 mb-2">
                 <span class="btn botonesProyectos rounded me-1" id="js" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="21" height="21" style="display: inline-block; vertical-align: middle;">
-                    <path fill="#fff" d="M 12.138672 7 C 9.6276719 7 7.7705156 9.2570781 7.8535156 11.705078 C 7.9335156 14.056078 7.8290312 17.102938 7.0820312 19.585938 C 6.3340313 22.076937 5.068 23.651516 3 23.853516 L 3 26.146484 C 5.068 26.348484 6.3340312 27.923062 7.0820312 30.414062 C 7.8290312 32.897063 7.9325156 35.943922 7.8535156 38.294922 C 7.7705156 40.742922 9.6276719 43 12.138672 43 L 37.865234 43 C 40.376234 43 42.233391 40.742922 42.150391 38.294922 C 42.070391 35.943922 42.173922 32.897063 42.919922 30.414062 C 43.668922 27.923063 44.932 26.348484 47 26.146484 L 47 23.853516 C 44.932 23.651516 43.668922 22.076937 42.919922 19.585938 C 42.172922 17.102937 42.070391 14.056078 42.150391 11.705078 C 42.232391 9.2570781 40.374281 7 37.863281 7 L 12.138672 7 z M 12.138672 9 L 37.863281 9 C 38.596281 9 39.105344 9.3658281 39.402344 9.6738281 C 39.902344 10.190828 40.175391 10.906719 40.150391 11.636719 C 40.071391 13.966719 40.154906 17.336156 41.003906 20.160156 C 41.783906 22.756156 43.011203 24.21 44.283203 25 C 43.012203 25.79 41.784906 27.244844 41.003906 29.839844 C 40.154906 32.663844 40.071391 36.033281 40.150391 38.363281 C 40.175391 39.093281 39.902344 39.808172 39.402344 40.326172 C 39.105344 40.634172 38.596281 41 37.863281 41 L 12.138672 41 C 11.405672 41 10.898563 40.634172 10.601562 40.326172 C 10.101562 39.809172 9.8285156 39.093281 9.8535156 38.363281 C 9.9325156 36.033281 9.8470469 32.663844 8.9980469 29.839844 C 8.2180469 27.244844 6.99075 25.79 5.71875 25 C 6.99075 24.21 8.2180469 22.755156 8.9980469 20.160156 C 9.8470469 17.336156 9.9325156 13.966719 9.8535156 11.636719 C 9.8285156 10.906719 10.101562 10.190828 10.601562 9.6738281 C 10.898563 9.3658281 11.405672 9 12.138672 9 z M 17.867188 15.632812 L 17.867188 34.365234 L 25.576172 34.365234 C 27.579172 34.365234 29.242766 33.877172 30.384766 32.951172 C 31.528766 32.024172 32.132813 30.675781 32.132812 29.050781 C 32.132812 26.596781 30.388062 24.752172 27.789062 24.451172 L 27.789062 24.421875 C 29.700063 24.091875 31.191406 22.301125 31.191406 20.328125 C 31.191406 18.933125 30.655625 17.752109 29.640625 16.912109 C 28.629625 16.075109 27.209156 15.632812 25.535156 15.632812 L 17.867188 15.632812 z M 20.919922 18.083984 L 24.822266 18.083984 C 26.963266 18.083984 28.142578 19.022516 28.142578 20.728516 C 28.141578 22.559516 26.741219 23.568359 24.199219 23.568359 L 20.919922 23.568359 L 20.919922 18.083984 z M 20.919922 25.863281 L 24.794922 25.863281 C 27.594922 25.863281 29.015625 26.876094 29.015625 28.871094 C 29.015625 30.864094 27.614797 31.917969 24.966797 31.917969 L 20.919922 31.917969 L 20.919922 25.863281 z"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="21" height="21"
+                    style="display: inline-block; vertical-align: middle;">
+                    <path fill="#fff"
+                      d="M 12.138672 7 C 9.6276719 7 7.7705156 9.2570781 7.8535156 11.705078 C 7.9335156 14.056078 7.8290312 17.102938 7.0820312 19.585938 C 6.3340313 22.076937 5.068 23.651516 3 23.853516 L 3 26.146484 C 5.068 26.348484 6.3340312 27.923062 7.0820312 30.414062 C 7.8290312 32.897063 7.9325156 35.943922 7.8535156 38.294922 C 7.7705156 40.742922 9.6276719 43 12.138672 43 L 37.865234 43 C 40.376234 43 42.233391 40.742922 42.150391 38.294922 C 42.070391 35.943922 42.173922 32.897063 42.919922 30.414062 C 43.668922 27.923063 44.932 26.348484 47 26.146484 L 47 23.853516 C 44.932 23.651516 43.668922 22.076937 42.919922 19.585938 C 42.172922 17.102937 42.070391 14.056078 42.150391 11.705078 C 42.232391 9.2570781 40.374281 7 37.863281 7 L 12.138672 7 z M 12.138672 9 L 37.863281 9 C 38.596281 9 39.105344 9.3658281 39.402344 9.6738281 C 39.902344 10.190828 40.175391 10.906719 40.150391 11.636719 C 40.071391 13.966719 40.154906 17.336156 41.003906 20.160156 C 41.783906 22.756156 43.011203 24.21 44.283203 25 C 43.012203 25.79 41.784906 27.244844 41.003906 29.839844 C 40.154906 32.663844 40.071391 36.033281 40.150391 38.363281 C 40.175391 39.093281 39.902344 39.808172 39.402344 40.326172 C 39.105344 40.634172 38.596281 41 37.863281 41 L 12.138672 41 C 11.405672 41 10.898563 40.634172 10.601562 40.326172 C 10.101562 39.809172 9.8285156 39.093281 9.8535156 38.363281 C 9.9325156 36.033281 9.8470469 32.663844 8.9980469 29.839844 C 8.2180469 27.244844 6.99075 25.79 5.71875 25 C 6.99075 24.21 8.2180469 22.755156 8.9980469 20.160156 C 9.8470469 17.336156 9.9325156 13.966719 9.8535156 11.636719 C 9.8285156 10.906719 10.101562 10.190828 10.601562 9.6738281 C 10.898563 9.3658281 11.405672 9 12.138672 9 z M 17.867188 15.632812 L 17.867188 34.365234 L 25.576172 34.365234 C 27.579172 34.365234 29.242766 33.877172 30.384766 32.951172 C 31.528766 32.024172 32.132813 30.675781 32.132812 29.050781 C 32.132812 26.596781 30.388062 24.752172 27.789062 24.451172 L 27.789062 24.421875 C 29.700063 24.091875 31.191406 22.301125 31.191406 20.328125 C 31.191406 18.933125 30.655625 17.752109 29.640625 16.912109 C 28.629625 16.075109 27.209156 15.632812 25.535156 15.632812 L 17.867188 15.632812 z M 20.919922 18.083984 L 24.822266 18.083984 C 26.963266 18.083984 28.142578 19.022516 28.142578 20.728516 C 28.141578 22.559516 26.741219 23.568359 24.199219 23.568359 L 20.919922 23.568359 L 20.919922 18.083984 z M 20.919922 25.863281 L 24.794922 25.863281 C 27.594922 25.863281 29.015625 26.876094 29.015625 28.871094 C 29.015625 30.864094 27.614797 31.917969 24.966797 31.917969 L 20.919922 31.917969 L 20.919922 25.863281 z" />
                   </svg> BootStrap</span>
               </div>
             </div>
             <div class="contenedorTecnologias w-75 mb-4">
-              <p class="text-start mt-4">Este proyecto es mi TFG de DAW el cual es una red social para programadores, con autenticación, posts, seguidos, mensajes privados, etc.</p>
-              <p class="text-start mt-4">Usando <b>Angular17</b> como framework frontend, <b>BootStrap 5</b> para los estilos y <b>php</b> como backend el cual actúa como una API la cual será consumida desde Angular.</p>
+              <p class="text-center text-lg-start mt-4">Este proyecto es mi TFG de DAW el cual es una red social para programadores,
+                con autenticación, posts, seguidos, mensajes privados, etc.</p>
+              <p class="text-center text-lg-start mt-4">Usando <b>Angular17</b> como framework frontend, <b>BootStrap 5</b> para los
+                estilos y <b>php</b> como backend el cual actúa como una API la cual será consumida desde Angular.</p>
               <div class="d-flex botonesRedireccion">
                 <div class="mb-2">
                   <a href="https://github.com/DemboNauta/devthreads" class="btn botones rounded-pill me-1"
                     target="_blank"><i class="bi bi-github "></i> Código</a>
                 </div>
                 <div class="mb-2">
-                  <a href="https://devthreads.es/" class="btn botones rounded-pill me-1"
-                    target="_blank"></i><i class="bi bi-box-arrow-up-right"></i> Preview</a>
+                  <a href="https://devthreads.es/" class="btn botones rounded-pill me-1" target="_blank"></i><i
+                      class="bi bi-box-arrow-up-right"></i> Preview</a>
                 </div>
               </div>
             </div>
@@ -286,10 +380,13 @@
 
             </div>
             <div class="contenedorTecnologias w-75 mb-4">
-              <p class="text-start mt-4">Proyecto el cual mediante archivos CSV permite generar estadísticas, obtenidos
-                de encuestas realizadas por el alumnado de un centro de formación profesional, en el proyecto se encuentra el
-                frontend  con <b>HTML, CSS y JavaScript</b> y el backend, para el almacenamiento de usuarios, y de resultados de las
-                encuestas usando <b>php</b> y <b>MySQL</b> y el uso de la librería <b>Chart.js</b> para generar los gráficos.</p>
+              <p class="text-center text-lg-start mt-4">Proyecto el cual mediante archivos CSV permite generar estadísticas, obtenidos
+                de encuestas realizadas por el alumnado de un centro de formación profesional, en el proyecto se
+                encuentra el
+                frontend con <b>HTML, CSS y JavaScript</b> y el backend, para el almacenamiento de usuarios, y de
+                resultados de las
+                encuestas usando <b>php</b> y <b>MySQL</b> y el uso de la librería <b>Chart.js</b> para generar los
+                gráficos.</p>
               <div class="d-flex botonesRedireccion">
                 <div class="mb-2">
                   <a href="https://github.com/DemboNauta/statisticsEnjoyer" class="btn botones rounded-pill me-1"
@@ -307,8 +404,8 @@
         <article class="d-flex flex-wrap mb-4">
           <div class="col-12 col-md-6">
             <div class="p-1">
-              <a href="https://edgarcountrymadness.netlify.app/" target="_blank"><img
-                  src="img/countryMadness.webp" alt="" class="w-100 rounded imagenProyectos"></a>
+              <a href="https://edgarcountrymadness.netlify.app/" target="_blank"><img src="img/countryMadness.webp"
+                  alt="" class="w-100 rounded imagenProyectos"></a>
             </div>
           </div>
           <div class="col-12 col-md-6 ps-3">
@@ -349,83 +446,83 @@
               </div>
             </div>
             <div class="contenedorTecnologias w-75 mb-4">
-              <p class="text-start mt-4">Página la cual muestra información de países y ciudades mediante el consumo de
+              <p class="text-center text-lg-start mt-4">Página la cual muestra información de países y ciudades mediante el consumo de
                 distintas APIs utilizando <b>JavaScript</b>, también incluye un minijuego de adivinar la bandera.</p>
               <div class="d-flex botonesRedireccion">
                 <div class="mb-2">
                   <a href="https://github.com/DemboNauta/edgarCountryMadness" class="btn botones rounded-pill me-1"
-                  target="_blank"><i class="bi bi-github "></i> Código</a>
+                    target="_blank"><i class="bi bi-github "></i> Código</a>
                 </div>
                 <div class="mb-2">
                   <a href="https://edgarcountrymadness.netlify.app/" class="btn botones rounded-pill me-1"
-                  target="_blank"></i><i class="bi bi-box-arrow-up-right"></i> Preview</a>
+                    target="_blank"></i><i class="bi bi-box-arrow-up-right"></i> Preview</a>
                 </div>
               </div>
             </div>
-          </article>
-          
-        </div>
-        
-      </section>
-      
-      <section id="tecnologías">
-        <h2 class="font-weight-bold text-start p-4 text-center"><i class="bi bi-book"></i> Tecnologías</h2>
-        <div class="container-fluid mt-4">
-          <div class="row">
-            <div class="col-md-4 mb-4">
-              <a class="card" target="_blank" href="https://angular.io">
-                <div class="card-body">
-                  <h5 class="card-title">Angular</h5>
-                  <p class="card-text">Desarrollo de SPAs, consumo de APIs y testing</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4 mb-4">
-              <a class="card" target="_blank" href="https://www.python.org">
-                <div class="card-body">
-                  <h5 class="card-title">Python</h5>
-                  <p class="card-text">Automatización de tareas y consumo de APIs</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4 mb-4">
-              <a class="card" target="_blank" href="https://www.php.net">
-                <div class="card-body">
-                  <h5 class="card-title">PHP</h5>
-                  <p class="card-text">Desarrollo backend y creación de APIs</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4 mb-4">
-              <a class="card" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
-                <div class="card-body">
-                  <h5 class="card-title">JavaScript</h5>
-                  <p class="card-text">Frontend, consumo de APIs y manipulación del DOM</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4 mb-4">
-              <a class="card" target="_blank" href="https://www.oracle.com/java/">
-                <div class="card-body">
-                  <h5 class="card-title">Java</h5>
-                  <p class="card-text">Lenguaje backend con bases de datos SQL y ficheros</p>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4 mb-4">
-              <a class="card" target="_blank" href="https://dotnet.microsoft.com/">
-                <div class="card-body">
-                  <h5 class="card-title">C# y .NET</h5>
-                  <p class="card-text">Actualmente formándome en .NET para desarrollo backend</p>
-                </div>
-              </a>
-            </div>
+        </article>
+
+      </div>
+
+    </section>
+
+    <section id="tecnologías">
+      <h2 class="font-weight-bold text-start p-4 text-center"><i class="bi bi-book"></i> Tecnologías</h2>
+      <div class="container-fluid mt-4">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <a class="card" target="_blank" href="https://angular.io">
+              <div class="card-body">
+                <h5 class="card-title">Angular</h5>
+                <p class="card-text">Desarrollo de SPAs, consumo de APIs y testing</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 mb-4">
+            <a class="card" target="_blank" href="https://www.python.org">
+              <div class="card-body">
+                <h5 class="card-title">Python</h5>
+                <p class="card-text">Automatización de tareas y consumo de APIs</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 mb-4">
+            <a class="card" target="_blank" href="https://www.php.net">
+              <div class="card-body">
+                <h5 class="card-title">PHP</h5>
+                <p class="card-text">Desarrollo backend y creación de APIs</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 mb-4">
+            <a class="card" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+              <div class="card-body">
+                <h5 class="card-title">JavaScript</h5>
+                <p class="card-text">Frontend, consumo de APIs y manipulación del DOM</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 mb-4">
+            <a class="card" target="_blank" href="https://www.oracle.com/java/">
+              <div class="card-body">
+                <h5 class="card-title">Java</h5>
+                <p class="card-text">Lenguaje backend con bases de datos SQL y ficheros</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 mb-4">
+            <a class="card" target="_blank" href="https://dotnet.microsoft.com/">
+              <div class="card-body">
+                <h5 class="card-title">C# y .NET</h5>
+                <p class="card-text">Actualmente formándome en .NET para desarrollo backend</p>
+              </div>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
     <section id="contacto">
-      <h2 class="font-weight-bold my-4">Contacto</h2>
+      <h2 class="font-weight-bold my-4">Contáctame</h2>
 
       <form data-netlify="true" name="contacto" method="POST" class="w-50 mx-auto" netlify onSubmit="sumbit"
         data-netlify-honeypot="bot-field" action="#">
@@ -462,11 +559,11 @@
 
 
 
-        
+
         <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
           href="https://www.linkedin.com/in/edgar-milá-molero/" target="_blank" role="button"
           data-mdb-ripple-color="dark"><i class="bi bi-linkedin icono"></i></a>
-        
+
         <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1"
           href="https://github.com/DemboNauta" target="_blank" role="button" data-mdb-ripple-color="dark"><i
             class="bi bi-github icono"></i></a>
