@@ -1,8 +1,3 @@
-/* body{
-    background-color: #030034;
-    /* background-color: rgb(41, 41, 41); 
-} */
-
 nav {
     background: rgb(1, 0, 25);
     backdrop-filter: blur(6px);
@@ -207,6 +202,21 @@ main section {
     border-radius: 50%;
     border: 1px solid #131315;
     transition: all 0.3s ease-in-out;
+
+    &:hover {
+        border: 1px solid #bcbcce;
+        transform: scale(1.01);
+        box-shadow: 0px 0px 10px #bcbcce;
+    }
+}
+
+.imagenFormacion {
+    width: 110px;
+    min-height: 110px;
+    border-radius: 50%;
+    border: 1px solid #131315;
+    transition: all 0.2s ease-in-out;
+
     &:hover {
         border: 1px solid #bcbcce;
         transform: scale(1.01);
@@ -215,14 +225,15 @@ main section {
 }
 
 .experiencie-span {
-    background-color: #131315; 
-    color: white; 
-    font-size: 12px; 
-    border-radius: 12px; 
-    display: inline-block; 
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+    background-color: #e5e5edde;
+    color: rgb(14, 13, 13);
+    font-size: 12px;
+    border-radius: 12px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid rgb(59, 55, 55);
 }
 
 
@@ -285,11 +296,14 @@ main section {
 
 @media (max-width: 767.98px) {
     .tech-buttons .badge {
-      flex: 1 1 45%; /* Cada badge toma el 45% del ancho del contenedor */
-      max-width: 83px; /* Cada badge no supera el 45% del ancho del contenedor */
-      text-align: center; /* Centra el texto dentro de cada badge */
+        flex: 1 1 45%;
+        /* Cada badge toma el 45% del ancho del contenedor */
+        max-width: 83px;
+        /* Cada badge no supera el 45% del ancho del contenedor */
+        text-align: center;
+        /* Centra el texto dentro de cada badge */
     }
-  }
+}
 
 
 #mensaje {
@@ -318,6 +332,21 @@ hr {
     position: relative;
 }
 
+.study-title {
+    font-weight: bold;
+    font-size: 19px;
+    margin-top: 0;
+}
+
+.study-institution {
+    margin: 0;
+    color: #555;
+}
+.study-year{
+    margin: 0;
+    font-weight: 500;
+    color: #000000;
+}
 
 
 .separador {
@@ -441,9 +470,6 @@ article div h3 {
         margin: 10px auto;
     }
 
-    .botonesRedireccion {
-        justify-content: center;
-    }
 
     section p {
         text-align: center !important;
@@ -467,28 +493,4 @@ article div h3 {
     }
 
 
-}
-
-
-@media (min-width:1000px) {
-
-    .timeline-steps .timeline-step:not(:last-child):after {
-        content: "";
-        display: block;
-        border-top: .25rem dotted #050612d6;
-        width: 3.46rem;
-        position: absolute;
-        left: 7.5rem;
-        top: .3125rem
-    }
-
-    .timeline-steps .timeline-step:not(:first-child):before {
-        content: "";
-        display: block;
-        border-top: .25rem dotted #050612dc;
-        width: 3.8125rem;
-        position: absolute;
-        right: 7.5rem;
-        top: .3125rem
-    }
 }
