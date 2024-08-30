@@ -116,6 +116,9 @@ nav {
 
 .titulo {
     background-color: yellow;
+    line-height: 1.5;
+    font-size: 2rem;
+    text-wrap: pretty;
 }
 
 .activo {
@@ -133,6 +136,10 @@ main section {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
+}
+
+#contacto{
+    margin-bottom: 250px !important;
 }
 
 .contenedorBotones {
@@ -455,9 +462,7 @@ article div h3 {
     color: black;
 }
 
-#contacto {
-    margin-bottom: 250px !important;
-}
+
 
 .navbar-toggler {
     border-color: white;
@@ -476,6 +481,8 @@ article div h3 {
     
 
 }
+
+
 
 @media(max-width:768px) {
     article div h3 {
