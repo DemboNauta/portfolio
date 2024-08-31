@@ -423,8 +423,9 @@ article div h3 {
     color: white;
     cursor: default;
 }
+.st0 { fill-rule: evenodd; clip-rule: evenodd; fill: #DD0031; } .st1 { fill-rule: evenodd; clip-rule: evenodd; fill: #C3002F; } .st2 { fill-rule: evenodd; clip-rule: evenodd; fill: #FFFFFF; } 
 
-#js {
+.js {
     font-size: 13px;
 }
 
@@ -462,6 +463,10 @@ article div h3 {
     color: black;
 }
 
+#angular-card{
+    background-color: rgba(255, 0, 0, 0.137);
+    border: 1px solid rgba(255, 0, 0, 0.53);
+}
 
 
 .navbar-toggler {
