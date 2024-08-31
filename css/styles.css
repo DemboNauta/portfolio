@@ -138,8 +138,12 @@ main section {
     padding: 10px;
 }
 
-#contacto{
+#section-contacto{
     margin-bottom: 250px !important;
+}
+
+#formacion .container-fluid{
+    padding: 50px 100px;
 }
 
 .contenedorBotones {
@@ -437,28 +441,22 @@ article div h3 {
     color: rgb(184, 184, 184);
 }
 
-#tecnologías .card {
+#tecnologias .card {
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+    
 
 }
 
-#tecnologías .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
 
-#tecnologías .card-body {
-    transition: background-color 0.3s;
+#tecnologias .card-body {
+    transition: all 0.3s;
     min-height: 110px;
 }
 
-#tecnologías .card:hover .card-body {
-    background-color: #f8f9fa;
-    /* Color de fondo más claro al pasar el ratón */
-}
 
-#tecnologías a {
+
+#tecnologias a {
     text-decoration: none;
     color: black;
 }
@@ -466,8 +464,52 @@ article div h3 {
 #angular-card{
     background-color: rgba(255, 0, 0, 0.137);
     border: 1px solid rgba(255, 0, 0, 0.53);
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.351);
+    &:hover{
+        box-shadow: 0 8px 20px rgba(255, 0, 0, 0.461);
+    }
 }
-
+#python-card{
+    background-color: #4583b61c;
+    border: 1px solid #4584b6;
+    box-shadow: 0 8px 16px #4583b678;
+    &:hover{
+        box-shadow: 0 8px 20px #4583b6bd;
+    }
+}
+#php-card{
+    background-color: #777bb31a;
+    border: 1px solid #777BB3;
+    box-shadow: 0 8px 16px #777bb38b;
+    &:hover{
+        box-shadow: 0 8px 20px #777bb3bd;
+    }
+}
+#js-card{
+    background-color: #f0da4f41;
+    border: 1px solid #f0db4f;
+    box-shadow: 0 8px 16px #f0da4f4a;
+    &:hover{
+        box-shadow: 0 8px 20px #f0da4fb1;
+    }
+    
+}
+#java-card{
+    background-color: #f8972046;
+    border: 1px solid #f89820;
+    box-shadow: 0 8px 16px #f897204a;
+    &:hover{
+        box-shadow: 0 8px 20px #f897209f;
+    }
+}
+#dotnet-card{
+    background-color: #9b49932e;
+    border: 1px solid #9b4993;
+    box-shadow: 0 8px 16px #9b49932e;
+    &:hover{
+        box-shadow: 0 8px 20px #9b4993a9;
+    }
+}
 
 .navbar-toggler {
     border-color: white;
