@@ -1,5 +1,4 @@
-![image](https://github.com/user-attachments/assets/1dc33172-686f-4bdd-a67c-211a0dd40a0b)
-
+![image](https://github.com/user-attachments/assets/3061b0dd-00ca-45ae-a785-5f98ae2e74e0)
 
 
 Buenas, este es mi portfolio personal!!
