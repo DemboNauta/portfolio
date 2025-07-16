@@ -1,0 +1,132 @@
+---
+export interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+---
+
+<header class="w-full fixed top-0 left-0 z-50 bg-transparent backdrop-blur-md">
+  <nav class="max-w-4xl mx-auto flex items-center py-4 px-4">
+    <!-- Menú de navegación -->
+    <div class="flex items-center flex-1">
+      <!-- Icono hamburguesa solo en móvil -->
+      <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 p-2 rounded transition focus:outline-none mr-2" aria-label="Abrir menú">
+        <span class="block w-6 h-0.5 bg-gray-800 dark:bg-gray-100 mb-1 transition-all"></span>
+        <span class="block w-6 h-0.5 bg-gray-800 dark:bg-gray-100 mb-1 transition-all"></span>
+        <span class="block w-6 h-0.5 bg-gray-800 dark:bg-gray-100 transition-all"></span>
+      </button>
+      <!-- Enlaces navegación: visibles en desktop, ocultos en móvil -->
+      <div id="nav-links" class="hidden md:flex gap-8 items-center flex-1 justify-center">
+        <a id="nav-inicio" href="#inicio" class="text-lg font-medium text-gray-900 dark:text-gray-100 hover:underline transition">{lang === 'en' ? 'Home' : 'Inicio'}</a>
+        <a id="nav-experiencia" href="#experiencia" class="text-lg font-medium text-gray-900 dark:text-gray-100 hover:underline transition">{lang === 'en' ? 'Experience' : 'Experiencia'}</a>
+        <a id="nav-estudios" href="#estudios" class="text-lg font-medium text-gray-900 dark:text-gray-100 hover:underline transition">{lang === 'en' ? 'Education' : 'Estudios'}</a>
+        <a id="nav-proyectos" href="#proyectos" class="text-lg font-medium text-gray-900 dark:text-gray-100 hover:underline transition">{lang === 'en' ? 'Projects' : 'Proyectos'}</a>
+      </div>
+    </div>
+    <!-- Controles tema e idioma: siempre visibles y totalmente a la derecha -->
+    <div class="flex items-center gap-2 justify-end flex-shrink-0">
+      <button id="theme-toggle" aria-label={lang === 'en' ? 'Light/Dark mode' : 'Modo claro/oscuro'} class="p-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 transition theme-toggle-animate">
+        <svg id="icon-sun" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 5.66l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        <svg id="icon-moon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg>
+      </button>
+      <div id="lang-toggle-wrapper" class="flex flex-col items-center">
+        <div id="lang-toggle" class="relative w-16 h-8 bg-gray-200 dark:bg-gray-700 rounded-full cursor-pointer transition flex items-center px-1" tabindex="0" role="button" aria-label="Cambiar idioma">
+          <span id="lang-es" class="absolute left-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300 transition select-none">ES</span>
+          <span id="lang-en" class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300 transition select-none">EN</span>
+          <span id="lang-ball" class="block w-6 h-6 bg-white dark:bg-gray-900 rounded-full shadow-md transition-transform duration-300 flex items-center justify-center text-xs font-bold text-gray-700 dark:text-gray-200 select-none"></span>
+        </div>
+      </div>
+    </div>
+    <!-- Menú vertical móvil -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 flex flex-col items-center justify-center gap-8 z-50 transition-transform duration-300 translate-x-full md:hidden">
+      <a href="#inicio" class="text-2xl font-semibold text-gray-900 dark:text-gray-100">{lang === 'en' ? 'Home' : 'Inicio'}</a>
+      <a href="#experiencia" class="text-2xl font-semibold text-gray-900 dark:text-gray-100">{lang === 'en' ? 'Experience' : 'Experiencia'}</a>
+      <a href="#estudios" class="text-2xl font-semibold text-gray-900 dark:text-gray-100">{lang === 'en' ? 'Education' : 'Estudios'}</a>
+      <a href="#proyectos" class="text-2xl font-semibold text-gray-900 dark:text-gray-100">{lang === 'en' ? 'Projects' : 'Proyectos'}</a>
+    </div>
+  </nav>
+</header>
+
+<script is:inline>
+  // Tema claro/oscuro
+  const toggle = document.getElementById('theme-toggle');
+  toggle?.addEventListener('click', () => {
+    const html = document.documentElement;
+    if (html.classList.contains('dark')) {
+      html.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      html.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+  if (typeof window !== 'undefined') {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  }
+  // Toggle de idioma mejorado
+  function updateLangToggle() {
+    const langBall = document.getElementById('lang-ball');
+    const es = document.getElementById('lang-es');
+    const en = document.getElementById('lang-en');
+    const isEn = window.location.pathname.startsWith('/en');
+    if (langBall) {
+      langBall.style.transform = isEn ? 'translateX(32px)' : 'translateX(0px)';
+      langBall.textContent = isEn ? 'EN' : 'ES';
+    }
+    if (es) {
+      es.style.opacity = isEn ? '0.5' : '1';
+    }
+    if (en) {
+      en.style.opacity = isEn ? '1' : '0.5';
+    }
+  }
+  const langToggle = document.getElementById('lang-toggle');
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      const isEn = window.location.pathname.startsWith('/en');
+      if (!isEn) {
+        window.location.pathname = '/en/';
+      } else {
+        window.location.pathname = '/es/';
+      }
+    });
+    langToggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        langToggle.click();
+      }
+    });
+    updateLangToggle();
+    window.addEventListener('DOMContentLoaded', updateLangToggle);
+    window.addEventListener('popstate', updateLangToggle);
+  }
+  // Menú hamburguesa móvil
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileMenu.classList.add('translate-x-full');
+        mobileMenu.classList.remove('translate-x-0');
+        document.body.style.overflow = '';
+      }
+    });
+    // Cerrar menú al hacer click en un enlace
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.classList.add('translate-x-full');
+        mobileMenu.classList.remove('translate-x-0');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+</script>

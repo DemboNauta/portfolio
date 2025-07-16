@@ -1,0 +1,17 @@
+---
+export interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+---
+<section id="inicio" class="flex flex-col items-center justify-center min-h-[60vh] text-center px-4 py-12">
+  <img src="/img/foto_edgar.png" alt="Edgar Milá" class="w-40 h-40 rounded-full shadow-lg mb-6 object-cover border-4 border-gray-200 dark:border-gray-700" loading="lazy" />
+  <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+    {lang === 'en' ? "FullStack Developer with 1 year of experience in Angular & .NET" : "Desarrollador FullStack con 1 año de experiencia en Angular y .NET"}
+  </h1>
+  <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl">
+    {lang === 'en'
+      ? "I build web apps with Angular and .NET. Computer Engineering student at UOC. Currently working at Soluciones IP (Cuenca, Spain)."
+      : "Desarrollo aplicaciones web con Angular y .NET. Estudiante de Ingeniería Informática en la UOC. Actualmente trabajo en Soluciones IP (Cuenca, España)."}
+  </p>
+</section> 

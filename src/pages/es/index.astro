@@ -1,0 +1,25 @@
+---
+import Header from "../../components/Header.astro";
+import "../../styles/global.css";
+import Inicio from "../../components/Inicio.astro";
+import Experiencia from "../../components/Experiencia.astro";
+import Estudios from "../../components/Estudios.astro";
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Portfolio Edgar Milá</title>
+	</head>
+	<body class="min-h-screen bg-white dark:bg-dark-gradient transition-colors duration-500">
+		<Header />
+		<main>
+			<Inicio />
+			<Experiencia />
+            <Estudios />
+		</main>
+	</body>
+</html> 

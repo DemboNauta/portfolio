@@ -1,0 +1,52 @@
+---
+export interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+---
+<section id="estudios" class="max-w-2xl mx-auto py-12">
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-gray-900 dark:text-gray-100">
+    {lang === 'en' ? 'Education' : 'Estudios'}
+  </h2>
+  <div class="flex flex-col gap-8">
+    <!-- Ingeniería Informática -->
+    <div class="relative flex items-center bg-gradient-to-r from-gray-100 via-blue-50 to-gray-200 dark:from-gray-800 dark:via-blue-900/30 dark:to-gray-900 rounded-xl shadow p-6 border-l-8 border-blue-400 dark:border-blue-600">
+      <a href="https://www.uoc.edu/portal/es/index.html" target="_blank" rel="noopener noreferrer" class="group mr-6">
+        <img src="/img/uoc.webp" alt="Logo UOC" class="w-16 h-16 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-md transition-transform duration-200 group-hover:scale-110 group-hover:shadow-xl group-hover:border-blue-500 group-hover:dark:border-blue-400 transition-colors" />
+      </a>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1">{lang === 'en' ? 'Computer Engineering' : 'Ingeniería Informática'}</h3>
+        <div class="flex items-center gap-3">
+          <span class="text-base text-gray-700 dark:text-gray-300 font-medium">UOC</span>
+          <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full border border-blue-400 dark:border-blue-500 bg-white dark:bg-gray-900 text-blue-700 dark:text-blue-200 shadow-sm">{lang === 'en' ? 'Currently' : 'Actualmente'}</span>
+        </div>
+      </div>
+    </div>
+    <!-- G.S DAW -->
+    <div class="relative flex items-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-900 rounded-xl shadow p-6 border-l-8 border-gray-400 dark:border-gray-600">
+      <a href="https://cifp1cuenca.es/" target="_blank" rel="noopener noreferrer" class="group mr-6">
+        <img src="/img/cifpCuenca.webp" alt="Logo CIFP nº1 Cuenca" class="w-16 h-16 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-md transition-transform duration-200 group-hover:scale-110 group-hover:shadow-xl group-hover:border-purple-500 group-hover:dark:border-purple-400 transition-colors" />
+      </a>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1">{lang === 'en' ? 'Advanced Web Application Development' : 'G.S DAW'}</h3>
+        <div class="flex items-center gap-3">
+          <span class="text-base text-gray-700 dark:text-gray-300 font-medium">CIFP nº1 Cuenca</span>
+          <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full border border-gray-400 dark:border-gray-500 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 shadow-sm">2024</span>
+        </div>
+      </div>
+    </div>
+    <!-- G.M SMR -->
+    <div class="relative flex items-center bg-gradient-to-r from-gray-100 via-gray-50 to-gray-200 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900 rounded-xl shadow p-6 border-l-8 border-gray-300 dark:border-gray-700">
+      <a href="https://iespedromercedes.es/" target="_blank" rel="noopener noreferrer" class="group mr-6">
+        <img src="/img/pedroMercedes.webp" alt="Logo IES Pedro Mercedes" class="w-16 h-16 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-md transition-transform duration-200 group-hover:scale-110 group-hover:shadow-xl group-hover:border-pink-500 group-hover:dark:border-pink-400 transition-colors" />
+      </a>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1">{lang === 'en' ? 'Microcomputer Systems and Networks' : 'G.M SMR'}</h3>
+        <div class="flex items-center gap-3">
+          <span class="text-base text-gray-700 dark:text-gray-300 font-medium">IES Pedro Mercedes</span>
+          <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 shadow-sm">2022</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

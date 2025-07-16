@@ -1,0 +1,74 @@
+---
+export interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+---
+<section id="experiencia" class="max-w-2xl mx-auto py-12">
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-gray-900 dark:text-gray-100">
+    {lang === 'en' ? 'Work Experience' : 'Experiencia laboral'}
+  </h2>
+  <ol class="relative border-l-4 border-gray-200 dark:border-gray-700 pl-8">
+    <!-- Soluciones IP -->
+    <li class="mb-12 relative">
+      <span class="inline-block text-xs font-semibold px-3 py-1 mr-4 mb-2 rounded-full border border-blue-400 dark:border-blue-500 bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-200 shadow-sm transition-colors duration-200">
+        Septiembre 2024 - {lang === 'en' ? 'Present' : 'Actualidad'}
+      </span>
+      <div class="flex flex-col gap-1 ml-2">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">FullStack Developer Angular & .NET</h3>
+        <div class="flex items-center gap-2 mt-1">
+          <a href="https://www.solucionesip.com/" target="_blank" rel="noopener noreferrer" class="group">
+            <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white dark:bg-gray-800 shadow transition-transform duration-200 group-hover:scale-110 group-hover:shadow-lg">
+              <img src="/img/solucionesIp.webp" alt="Soluciones IP logo" class="w-10 h-10 object-contain rounded-full" />
+            </span>
+          </a>
+          <a href="https://www.solucionesip.com/" target="_blank" rel="noopener noreferrer"
+            class="text-base text-gray-700 dark:text-gray-300 font-medium relative transition-colors duration-300
+            bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-[length:200%_100%] bg-clip-text text-transparent
+            hover:from-pink-500 hover:to-blue-500 hover:bg-right-bottom hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-pink-500 focus:outline-none">
+            Soluciones IP
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-2">
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">Angular</span>
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">.NET</span>
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">Integración IA</span>
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">BootStrap 5</span>
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">SQL Server</span>
+        </div>
+        <span class="text-sm text-gray-500 dark:text-gray-400 mt-2">Cuenca (España)</span>
+      </div>
+    </li>
+    <!-- Servinet -->
+    <li class="mb-12 relative">
+      <span class="inline-block text-xs font-semibold px-3 py-1 mr-4 mb-2 rounded-full border border-blue-400 dark:border-blue-500 bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-200 shadow-sm transition-colors duration-200">
+        Abril 2024 - Junio 2024
+      </span>
+      <div class="flex flex-col gap-1 ml-2">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">FullStack Developer Angular & Python {lang === 'en' ? '(Internship)' : '(Prácticas)'}</h3>
+        <div class="flex items-center gap-2 mt-1">
+          <a href="https://www.servinet.net/" target="_blank" rel="noopener noreferrer" class="group">
+            <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white dark:bg-gray-800 shadow transition-transform duration-200 group-hover:scale-110 group-hover:shadow-lg">
+              <img src="/img/servinet.webp" alt="Servinet logo" class="w-10 h-10 object-contain rounded-full" />
+            </span>
+          </a>
+          <a href="https://www.servinet.net/" target="_blank" rel="noopener noreferrer"
+            class="text-base text-gray-700 dark:text-gray-300 font-medium relative transition-colors duration-300
+            bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-[length:200%_100%] bg-clip-text text-transparent
+            hover:from-pink-500 hover:to-blue-500 hover:bg-right-bottom hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-pink-500 focus:outline-none">
+            Servinet Sistemas y Comunicación S.L.U.
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-2">
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">Angular</span>
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">Python</span>
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">BootStrap 5</span>
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">Karma</span>
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">Jasmine</span>
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">Cypress.io</span>
+        </div>
+        <span class="text-sm text-gray-500 dark:text-gray-400 mt-2">Cuenca (España)</span>
+      </div>
+    </li>
+  </ol>
+</section> 

@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-dark-gradient {
+    background-color: #0a0a0a;
+    background-image: linear-gradient(135deg, #0a0a0a 0%, #18181b 60%, #232326 100%);
+  }
+}
+
+@layer components {
+  .theme-toggle-animate {
+    transition: box-shadow 0.3s, background 0.3s, transform 0.3s;
+  }
+  .theme-toggle-animate:hover {
+    box-shadow: 0 0 0 4px rgba(34,197,94,0.2), 0 2px 8px rgba(0,0,0,0.10);
+    background: linear-gradient(135deg, #fef9c3 0%, #fde68a 100%);
+    transform: scale(1.08) rotate(-8deg);
+  }
+  .dark .theme-toggle-animate:hover {
+    background: linear-gradient(135deg, #232326 0%, #18181b 100%);
+    box-shadow: 0 0 0 4px rgba(59,130,246,0.15), 0 2px 8px rgba(0,0,0,0.18);
+    transform: scale(1.08) rotate(8deg);
+  }
+}
