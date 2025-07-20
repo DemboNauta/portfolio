@@ -1,0 +1,61 @@
+---
+export interface Props {
+  lang?: string;
+}
+const { lang = 'es' } = Astro.props;
+---
+<section id="tecnologias" class="max-w-4xl mx-auto py-12">
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">
+    {lang === 'en' ? 'Technologies' : 'Tecnologías'}
+  </h2>
+  
+  <div class="flex flex-wrap justify-center gap-3 mb-8">
+    <!-- Angular -->
+    <div class="group">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 rounded-full text-sm font-medium border border-red-200 dark:border-red-800 transition-all duration-300 ease-in-out hover:bg-red-200 dark:hover:bg-red-800/40 hover:scale-105">
+        <img src="../../public/icons/angular.svg" height="20" width="20"/>
+        Angular
+      </div>
+    </div>
+
+    <!-- C#/.NET -->
+    <div class="group">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium border border-purple-200 dark:border-purple-800 transition-all duration-300 ease-in-out hover:bg-purple-200 dark:hover:bg-purple-800/40 hover:scale-105">
+        <img src="../../public/icons/dotnetcore.svg" height="20" width="20"/>
+        C#/.NET
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="group">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 rounded-full text-sm font-medium border border-yellow-200 dark:border-yellow-800 transition-all duration-300 ease-in-out hover:bg-yellow-200 dark:hover:bg-yellow-800/40 hover:scale-105">
+        <img src="../../public/icons/javascript.svg" height="20" width="20"/>
+        JavaScript
+      </div>
+    </div>
+
+    <!-- Python -->
+    <div class="group">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-800 transition-all duration-300 ease-in-out hover:bg-blue-200 dark:hover:bg-blue-800/40 hover:scale-105">
+        <img src="../../public/icons/python.svg" height="20" width="20"/>
+        Python
+      </div>
+    </div>
+
+    <!-- PHP -->
+    <div class="group">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 rounded-full text-sm font-medium border border-indigo-200 dark:border-indigo-800 transition-all duration-300 ease-in-out hover:bg-indigo-200 dark:hover:bg-indigo-800/40 hover:scale-105">
+        <img src="../../public/icons/php.svg" height="20" width="20"/>
+        PHP
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <p class="text-gray-600 dark:text-gray-400 text-sm max-w-2xl mx-auto leading-relaxed">
+      {lang === 'en' 
+        ? 'These are the main technologies I work with and have experience in. Each one represents a different area of expertise in my development journey.'
+        : 'Estas son las principales tecnologías con las que trabajo y tengo experiencia. Cada una representa un área diferente de especialización en mi trayectoria de desarrollo.'}
+    </p>
+  </div>
+</section> 

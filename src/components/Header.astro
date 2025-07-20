@@ -5,44 +5,52 @@ export interface Props {
 const { lang = 'es' } = Astro.props;
 ---
 
-<header class="w-full fixed top-0 left-0 z-50 bg-transparent backdrop-blur-md">
-  <nav class="max-w-4xl mx-auto flex items-center py-4 px-4">
+<header class="w-full fixed top-0 left-0 z-50 bg-white/30 dark:bg-gray-900/30 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-700/50">
+  <nav class="max-w-4xl mx-auto flex items-center py-2 px-4">
     <!-- Menú de navegación -->
     <div class="flex items-center flex-1">
       <!-- Icono hamburguesa solo en móvil -->
-      <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 p-2 rounded transition focus:outline-none mr-2" aria-label="Abrir menú">
-        <span class="block w-6 h-0.5 bg-gray-800 dark:bg-gray-100 mb-1 transition-all"></span>
-        <span class="block w-6 h-0.5 bg-gray-800 dark:bg-gray-100 mb-1 transition-all"></span>
-        <span class="block w-6 h-0.5 bg-gray-800 dark:bg-gray-100 transition-all"></span>
+      <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-8 h-8 p-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 transition-all duration-200 hover:bg-white/80 dark:hover:bg-gray-800/80 focus:outline-none mr-2" aria-label="Abrir menú">
+        <span id="hamburger-line-1" class="block w-5 h-0.5 bg-gray-700 dark:bg-gray-300 mb-1 transition-all duration-300 origin-center"></span>
+        <span id="hamburger-line-2" class="block w-5 h-0.5 bg-gray-700 dark:bg-gray-300 mb-1 transition-all duration-300 origin-center"></span>
+        <span id="hamburger-line-3" class="block w-5 h-0.5 bg-gray-700 dark:bg-gray-300 transition-all duration-300 origin-center"></span>
       </button>
       <!-- Enlaces navegación: visibles en desktop, ocultos en móvil -->
-      <div id="nav-links" class="hidden md:flex gap-8 items-center flex-1 justify-center">
-        <a id="nav-inicio" href="#inicio" class="text-lg font-medium text-gray-900 dark:text-gray-100 hover:underline transition">{lang === 'en' ? 'Home' : 'Inicio'}</a>
-        <a id="nav-experiencia" href="#experiencia" class="text-lg font-medium text-gray-900 dark:text-gray-100 hover:underline transition">{lang === 'en' ? 'Experience' : 'Experiencia'}</a>
-        <a id="nav-estudios" href="#estudios" class="text-lg font-medium text-gray-900 dark:text-gray-100 hover:underline transition">{lang === 'en' ? 'Education' : 'Estudios'}</a>
-        <a id="nav-proyectos" href="#proyectos" class="text-lg font-medium text-gray-900 dark:text-gray-100 hover:underline transition">{lang === 'en' ? 'Projects' : 'Proyectos'}</a>
+      <div id="nav-links" class="hidden md:flex gap-6 items-center flex-1 justify-center">
+        <a id="nav-inicio" href="#inicio" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200">{lang === 'en' ? 'Home' : 'Inicio'}</a>
+        <a id="nav-experiencia" href="#experiencia" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200">{lang === 'en' ? 'Experience' : 'Experiencia'}</a>
+        <a id="nav-estudios" href="#estudios" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200">{lang === 'en' ? 'Education' : 'Estudios'}</a>
+        <a id="nav-proyectos" href="#proyectos" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200">{lang === 'en' ? 'Projects' : 'Proyectos'}</a>
       </div>
     </div>
     <!-- Controles tema e idioma: siempre visibles y totalmente a la derecha -->
-    <div class="flex items-center gap-2 justify-end flex-shrink-0">
-      <button id="theme-toggle" aria-label={lang === 'en' ? 'Light/Dark mode' : 'Modo claro/oscuro'} class="p-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 transition theme-toggle-animate">
-        <svg id="icon-sun" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 5.66l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-        <svg id="icon-moon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg>
+    <div class="flex items-center gap-1.5 justify-end flex-shrink-0">
+      <button id="theme-toggle" aria-label={lang === 'en' ? 'Light/Dark mode' : 'Modo claro/oscuro'} class="p-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all duration-200 theme-toggle-animate">
+        <svg id="icon-sun" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 5.66l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        <svg id="icon-moon" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg>
       </button>
       <div id="lang-toggle-wrapper" class="flex flex-col items-center">
-        <div id="lang-toggle" class="relative w-16 h-8 bg-gray-200 dark:bg-gray-700 rounded-full cursor-pointer transition flex items-center px-1" tabindex="0" role="button" aria-label="Cambiar idioma">
-          <span id="lang-es" class="absolute left-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300 transition select-none">ES</span>
-          <span id="lang-en" class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300 transition select-none">EN</span>
-          <span id="lang-ball" class="block w-6 h-6 bg-white dark:bg-gray-900 rounded-full shadow-md transition-transform duration-300 flex items-center justify-center text-xs font-bold text-gray-700 dark:text-gray-200 select-none"></span>
+        <div id="lang-toggle" class="relative w-14 h-7 bg-gray-100 dark:bg-gray-700 rounded-full cursor-pointer transition flex items-center px-1 group" tabindex="0" role="button" aria-label="Cambiar idioma">
+          <span id="lang-es" class="absolute left-1.5 top-1/2 -translate-y-1/2 text-xs font-medium text-gray-600 dark:text-gray-400 transition-all duration-300 select-none group-hover:text-gray-800 dark:group-hover:text-gray-200"></span>
+          <span id="lang-en" class="absolute right-1.5 top-1/2 -translate-y-1/2 text-xs font-medium text-gray-600 dark:text-gray-400 transition-all duration-300 select-none group-hover:text-gray-800 dark:group-hover:text-gray-200"></span>
+          <span id="lang-ball" class="block w-5 h-5 bg-white dark:bg-gray-800 rounded-full shadow-sm transition-transform duration-300 flex items-center justify-center text-xs font-medium text-gray-700 dark:text-gray-300 select-none"></span>
         </div>
       </div>
     </div>
     <!-- Menú vertical móvil -->
-    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 flex flex-col items-center justify-center gap-8 z-50 transition-transform duration-300 translate-x-full md:hidden">
-      <a href="#inicio" class="text-2xl font-semibold text-gray-900 dark:text-gray-100">{lang === 'en' ? 'Home' : 'Inicio'}</a>
-      <a href="#experiencia" class="text-2xl font-semibold text-gray-900 dark:text-gray-100">{lang === 'en' ? 'Experience' : 'Experiencia'}</a>
-      <a href="#estudios" class="text-2xl font-semibold text-gray-900 dark:text-gray-100">{lang === 'en' ? 'Education' : 'Estudios'}</a>
-      <a href="#proyectos" class="text-2xl font-semibold text-gray-900 dark:text-gray-100">{lang === 'en' ? 'Projects' : 'Proyectos'}</a>
+    <div id="mobile-menu" class="fixed inset-0 w-full h-screen bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm flex flex-col items-center justify-center gap-8 z-40 opacity-0 pointer-events-none transition-all duration-300 md:hidden">
+      <!-- Botón cerrar -->
+      <button id="close-menu" class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-gray-200/80 dark:bg-gray-700/80 hover:bg-gray-300/80 dark:hover:bg-gray-600/80 transition-all duration-200" aria-label="Cerrar menú">
+        <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <div class="flex flex-col items-center gap-8">
+        <a href="#inicio" class="text-2xl font-medium text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 py-2">{lang === 'en' ? 'Home' : 'Inicio'}</a>
+        <a href="#experiencia" class="text-2xl font-medium text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 py-2">{lang === 'en' ? 'Experience' : 'Experiencia'}</a>
+        <a href="#estudios" class="text-2xl font-medium text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 py-2">{lang === 'en' ? 'Education' : 'Estudios'}</a>
+        <a href="#proyectos" class="text-2xl font-medium text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 py-2">{lang === 'en' ? 'Projects' : 'Proyectos'}</a>
+      </div>
     </div>
   </nav>
 </header>
@@ -73,13 +81,15 @@ const { lang = 'es' } = Astro.props;
     const en = document.getElementById('lang-en');
     const isEn = window.location.pathname.startsWith('/en');
     if (langBall) {
-      langBall.style.transform = isEn ? 'translateX(32px)' : 'translateX(0px)';
+      langBall.style.transform = isEn ? 'translateX(28px)' : 'translateX(0px)';
       langBall.textContent = isEn ? 'EN' : 'ES';
     }
     if (es) {
+      es.textContent = 'ES';
       es.style.opacity = isEn ? '0.5' : '1';
     }
     if (en) {
+      en.textContent = 'EN';
       en.style.opacity = isEn ? '1' : '0.5';
     }
   }
@@ -102,31 +112,62 @@ const { lang = 'es' } = Astro.props;
     window.addEventListener('DOMContentLoaded', updateLangToggle);
     window.addEventListener('popstate', updateLangToggle);
   }
-  // Menú hamburguesa móvil
+  // Menú hamburguesa móvil mejorado
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenu = document.getElementById('close-menu');
+  const line1 = document.getElementById('hamburger-line-1');
+  const line2 = document.getElementById('hamburger-line-2');
+  const line3 = document.getElementById('hamburger-line-3');
   let menuOpen = false;
-  if (menuToggle && mobileMenu) {
+  
+  // Función para cerrar el menú
+  function closeMobileMenu() {
+    menuOpen = false;
+    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+    mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+    document.body.style.overflow = '';
+    
+    // Resetear animación del icono
+    line1.style.transform = 'rotate(0deg) translate(0px, 0px)';
+    line2.style.opacity = '1';
+    line3.style.transform = 'rotate(0deg) translate(0px, 0px)';
+  }
+  
+  if (menuToggle && mobileMenu && line1 && line2 && line3) {
     menuToggle.addEventListener('click', () => {
       menuOpen = !menuOpen;
+      
       if (menuOpen) {
-        mobileMenu.classList.remove('translate-x-full');
-        mobileMenu.classList.add('translate-x-0');
+        // Abrir menú
+        mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+        mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
         document.body.style.overflow = 'hidden';
+        
+        // Animación del icono hamburguesa a X
+        line1.style.transform = 'rotate(45deg) translate(5px, 5px)';
+        line2.style.opacity = '0';
+        line3.style.transform = 'rotate(-45deg) translate(7px, -6px)';
       } else {
-        mobileMenu.classList.add('translate-x-full');
-        mobileMenu.classList.remove('translate-x-0');
-        document.body.style.overflow = '';
+        closeMobileMenu();
       }
     });
+    
+    // Botón cerrar
+    if (closeMenu) {
+      closeMenu.addEventListener('click', closeMobileMenu);
+    }
+    
     // Cerrar menú al hacer click en un enlace
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menuOpen = false;
-        mobileMenu.classList.add('translate-x-full');
-        mobileMenu.classList.remove('translate-x-0');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMobileMenu);
+    });
+    
+    // Cerrar menú al hacer click fuera del contenido (en el fondo)
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        closeMobileMenu();
+      }
     });
   }
 </script>

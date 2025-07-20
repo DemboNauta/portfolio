@@ -12,7 +12,7 @@ const { lang = 'es' } = Astro.props;
     <!-- Soluciones IP -->
     <li class="mb-12 relative">
       <span class="inline-block text-xs font-semibold px-3 py-1 mr-4 mb-2 rounded-full border border-blue-400 dark:border-blue-500 bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-200 shadow-sm transition-colors duration-200">
-        Septiembre 2024 - {lang === 'en' ? 'Present' : 'Actualidad'}
+        {lang === 'en' ? 'September 2024' : 'Septiembre 2024'} - {lang === 'en' ? 'Present' : 'Actualidad'}
       </span>
       <div class="flex flex-col gap-1 ml-2">
         <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">FullStack Developer Angular & .NET</h3>
@@ -32,17 +32,18 @@ const { lang = 'es' } = Astro.props;
         <div class="flex flex-wrap gap-2 mt-2">
           <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">Angular</span>
           <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">.NET</span>
-          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">Integración IA</span>
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">Python</span>
+          <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">{lang === 'en' ? 'AI Integration' : 'Integración IA'}</span>
           <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">BootStrap 5</span>
           <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">SQL Server</span>
         </div>
-        <span class="text-sm text-gray-500 dark:text-gray-400 mt-2">Cuenca (España)</span>
+        <span class="text-sm text-gray-500 dark:text-gray-400 mt-2">{lang === 'en' ? 'Cuenca (Spain)' : 'Cuenca (España)'}</span>
       </div>
     </li>
     <!-- Servinet -->
     <li class="mb-12 relative">
       <span class="inline-block text-xs font-semibold px-3 py-1 mr-4 mb-2 rounded-full border border-blue-400 dark:border-blue-500 bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-200 shadow-sm transition-colors duration-200">
-        Abril 2024 - Junio 2024
+        {lang === 'en' ? 'April 2024 - June 2024' : 'Abril 2024 - Junio 2024'}
       </span>
       <div class="flex flex-col gap-1 ml-2">
         <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">FullStack Developer Angular & Python {lang === 'en' ? '(Internship)' : '(Prácticas)'}</h3>
@@ -67,7 +68,7 @@ const { lang = 'es' } = Astro.props;
           <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">Jasmine</span>
           <span class="px-2 py-1 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded text-xs">Cypress.io</span>
         </div>
-        <span class="text-sm text-gray-500 dark:text-gray-400 mt-2">Cuenca (España)</span>
+        <span class="text-sm text-gray-500 dark:text-gray-400 mt-2">{lang === 'en' ? 'Cuenca (Spain)' : 'Cuenca (España)'}</span>
       </div>
     </li>
   </ol>
